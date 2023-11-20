@@ -1,0 +1,31 @@
+tile.saa.ore.cinnabar.stone.name=Stone Cinnabar Ore
+tile.saa.ore.cinnabar.stone.desc=
+tile.saa.ore.cinnabar.basalt.name=Basalt Cinnabar Ore
+tile.saa.ore.cinnabar.basalt.desc=
+tile.saa.ore.cinnabar.limestone.name=Limestone Cinnabar Ore
+tile.saa.ore.cinnabar.limestone.desc=
+tile.saa.ore.cinnabar.granite.name=Granite Cinnabar Ore
+tile.saa.ore.cinnabar.granite.desc=
+
+tile.saa.planterbox.name=Planter
+tile.saa.planterbox.desc=
+tile.saa.planterbox.dirt.name=Planter Full of Dirt
+tile.saa.planterbox.dirt.desc=
+tile.saa.planterbox.sand.name=Planter Full of Sand
+tile.saa.planterbox.sand.desc=
+tile.saa.planterbox.soulsand.name=Planter Full of Soulsand
+tile.saa.planterbox.soulsand.desc=
+
+tile.saa.flower.blossomite.name=Magic Blossom
+tile.saa.flower.blossomite.desc=
+tile.saa.flower.netherbell.name=Netherbell
+tile.saa.flower.netherbell.desc=
+
+item.saa.cinnabar.name=Cinnabar
+item.saa.cinnabar.desc=
+item.saa.bottle.empty.name=Empty Glass Bottle
+item.saa.bottle.empty.desc=
+item.saa.bottle.water.name=Bottle of Water
+item.saa.bottle.water.desc=
+item.saa.bottle.syntheticgold.name=Bottle of Synthetic Gold
+item.saa.bottle.syntheticgold.desc=

@@ -1,13 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "saa",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Spells and Alchemy",
+  "description": "Cookie adding spells and alchemy to your BTA game since 2023.",
   "authors": [
-    "Turnip Labs"
+    "Cookie Cakes"
   ],
+	"contributors": [
+
+	],
   "contact": {
     "homepage": "",
     "sources": ""
@@ -18,11 +21,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
-    ]
+      "cookie.spellsandalchemy.SpellsAndAlchemy"
+    ],
+		"terrain-api": [
+			"cookie.spellsandalchemy.compat.terrainapi.TerrainAPIPlugin"
+		]
   },
   "mixins": [
-      "examplemod.mixins.json"
+		"saa.mixins.json"
   ],
 
   "depends": {
