@@ -18,7 +18,7 @@ public class ItemBottle extends Item {
 		super(id);
 	}
 
-	// This is copied rom ItemBucketEmpty.class
+	// This is copied from ItemBucketEmpty.class
 	@Override
 	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer) {
 		float playerXRot = entityplayer.xRotO + (entityplayer.xRot - entityplayer.xRotO);

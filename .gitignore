@@ -4,3 +4,14 @@ build/
 out/
 run/
 run-server/
+lib/halplibe-3.0.6.jar
+lib/modmenu-bta-2.0.2-7.1.jar
+lib/terrainapi-1.4.1-7.1.jar
+/lib/
+*.jar
+lib/halplibe-3.0.6.jar
+lib/modmenu-bta-2.0.2-7.1.jar
+lib/terrainapi-1.4.1-7.1.jar
+lib/halplibe-3.0.6.jar
+lib/modmenu-bta-2.0.2-7.1.jar
+lib/terrainapi-1.4.1-7.1.jar

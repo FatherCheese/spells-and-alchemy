@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "magicstate=0": {
+      "model": "saa:block/magic_tank"
+    },
+    "magicstate=1": {
+      "model": "saa:block/magic_tank_4"
+    },
+    "magicstate=2": {
+      "model": "saa:block/magic_tank_8"
+    },
+    "magicstate=3": {
+      "model": "saa:block/magic_tank_12"
+    },
+    "magicstate=4": {
+      "model": "saa:block/magic_tank_full"
+    }
+  }
+}

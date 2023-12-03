@@ -80,6 +80,14 @@ repositories {
 		}
 		metadataSources { artifact() }
 	}
+	ivy {
+		url = "https://github.com/UselessBullets"
+		patternLayout {
+			artifact "[organisation]/releases/download/v[revision]/[module]-[revision].jar"
+			m2compatible = true
+		}
+		metadataSources { artifact() }
+	}
 }
 
 dependencies {
@@ -94,6 +102,9 @@ dependencies {
 
 	// TerrainAPI
 	modImplementation "TerrainAPI:terrainapi:${project.terrainapi_version}"
+
+	// DragonFly API
+	modImplementation "DragonFly:dragonfly:${project.dragonfly_version}"
 
 	modImplementation "ModMenu:ModMenu:2.0.2"
 	modImplementation "nocrashes:nocrashes:1.0.4"

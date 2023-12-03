@@ -4,13 +4,12 @@ import cookie.spellsandalchemy.block.SAABlocks;
 import cookie.spellsandalchemy.item.SAAItems;
 import net.minecraft.core.HitResult;
 import net.minecraft.core.block.Block;
+import net.minecraft.core.entity.fx.EntityDiggingFX;
 import net.minecraft.core.entity.player.EntityPlayer;
-import net.minecraft.core.enums.EnumBlockSoundEffectType;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.sound.SoundType;
 import net.minecraft.core.util.helper.MathHelper;
-import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.util.phys.Vec3d;
 import net.minecraft.core.world.World;
 
@@ -56,6 +55,15 @@ public class ItemBottleSyntheticGold extends Item {
 			if (block == Block.flowerRed) {
 				world.playSoundEffect(SoundType.WORLD_SOUNDS, x, y, z, "liquid.splash", 0.15F, 2.0F);
 				world.setBlockWithNotify(x, y, z, SAABlocks.flowerNether.id);
+				entityplayer.swingItem();
+
+				if (entityplayer.gamemode.consumeBlocks)
+					return new ItemStack(SAAItems.bottleEmpty);
+			}
+
+			if (block == Block.glass) {
+				world.playSoundEffect(SoundType.WORLD_SOUNDS, x, y, z, "liquid.splash", 0.15F, 2.0F);
+				world.setBlockWithNotify(x, y, z, SAABlocks.magicTank.id);
 				entityplayer.swingItem();
 
 				if (entityplayer.gamemode.consumeBlocks)

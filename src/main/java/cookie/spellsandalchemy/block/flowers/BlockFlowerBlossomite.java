@@ -1,18 +1,14 @@
 package cookie.spellsandalchemy.block.flowers;
 
 import cookie.spellsandalchemy.SAATags;
-import cookie.spellsandalchemy.SpellsAndAlchemy;
 import cookie.spellsandalchemy.spell.SpellUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockFlower;
 import net.minecraft.core.block.tag.BlockTags;
-import net.minecraft.core.entity.fx.EntityDiggingFX;
 import net.minecraft.core.entity.player.EntityPlayer;
-import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.item.block.ItemBlock;
 import net.minecraft.core.sound.SoundType;
-import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 
 import java.util.Random;
@@ -53,7 +49,7 @@ public class BlockFlowerBlossomite extends BlockFlower {
 	public boolean blockActivated(World world, int x, int y, int z, EntityPlayer player) {
 		ItemStack stack = player.getHeldItem();
 
-		if (stack != null && stack.getItem() == Item.stick)
+		if (stack != null && !(stack.getItem() instanceof ItemBlock))
 			SpellUtil.bindSpell(stack);
 
 		return super.blockActivated(world, x, y, z, player);

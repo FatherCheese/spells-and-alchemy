@@ -2,9 +2,7 @@ package cookie.spellsandalchemy;
 
 import cookie.spellsandalchemy.block.SAABlocks;
 import cookie.spellsandalchemy.item.SAAItems;
-import cookie.spellsandalchemy.recipe.SAARecipes;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.core.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +23,6 @@ public class SpellsAndAlchemy implements ModInitializer {
 		new SAABlocks().initializeBlocks();
 		new SAAItems().initializeItems();
 
-        LOGGER.info("Spells and Alchemy initialized. Have fun, young magic-user!");
+        LOGGER.info("Spells and Alchemy initialized. Have fun, novice mage!");
     }
 }

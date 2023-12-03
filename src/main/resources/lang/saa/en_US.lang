@@ -16,6 +16,9 @@ tile.saa.planterbox.sand.desc=
 tile.saa.planterbox.soulsand.name=Planter Full of Soulsand
 tile.saa.planterbox.soulsand.desc=
 
+tile.saa.tank.magic.name=Magic Tank
+tile.saa.tank.magic.desc=
+
 tile.saa.flower.blossomite.name=Magic Blossom
 tile.saa.flower.blossomite.desc=
 tile.saa.flower.netherbell.name=Netherbell

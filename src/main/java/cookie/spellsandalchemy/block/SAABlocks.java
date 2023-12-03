@@ -8,12 +8,18 @@ import cookie.spellsandalchemy.block.planters.BlockPlanterBox;
 import cookie.spellsandalchemy.block.planters.BlockPlanterDirt;
 import cookie.spellsandalchemy.block.planters.BlockPlanterSand;
 import cookie.spellsandalchemy.block.planters.BlockPlanterSoulsand;
+import cookie.spellsandalchemy.block.tank.BlockMagicTank;
+import cookie.spellsandalchemy.block.tank.entity.TileEntityMagicTank;
+import cookie.spellsandalchemy.block.tank.metastate.TankMetaStateInterpreter;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.client.sound.block.BlockSounds;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
 import turniplabs.halplibe.helper.BlockBuilder;
+import turniplabs.halplibe.helper.EntityHelper;
+import useless.dragonfly.helper.ModelHelper;
+import useless.dragonfly.model.block.BlockModelDragonFly;
 
 public class SAABlocks {
 	private int blockID = 1450;
@@ -29,6 +35,7 @@ public class SAABlocks {
 	public static Block planterBoxDirt;
 	public static Block planterBoxSand;
 	public static Block planterBoxSoulsand;
+	public static Block magicTank;
 	public static Block flowerNature;
 	public static Block flowerNether;
 
@@ -37,7 +44,7 @@ public class SAABlocks {
 	}
 
 	private void addMappings() {
-
+		EntityHelper.createTileEntity(TileEntityMagicTank.class, "MagicTank");
 	}
 
 	public void initializeBlocks() {
@@ -92,14 +99,26 @@ public class SAABlocks {
 			.build(new BlockPlanterSoulsand("planterbox.soulsand", nextBlockID()))
 			.withTags(BlockTags.MINEABLE_BY_AXE, SAATags.NETHER_GROWTH);
 
+		magicTank = new BlockBuilder(MOD_ID)
+			.setBlockSound(BlockSounds.GLASS)
+			.setHardness(0.5f)
+			.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(MOD_ID,
+				"block/magic_tank.json"),
+				ModelHelper.getOrCreateBlockState(MOD_ID, "magic_tank.json"),
+				new TankMetaStateInterpreter(), true, 0.25F))
+			.build(new BlockMagicTank("tank.magic", nextBlockID()))
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+
 		flowerNature = flowerBuilder
 			.setTextures("flower_magic_blossom.png")
 			.build(new BlockFlowerBlossomite("flower.blossomite", nextBlockID()))
-			.withTags(BlockTags.BROKEN_BY_FLUIDS);
+			.withTags(BlockTags.BROKEN_BY_FLUIDS)
+			.setTickOnLoad(true);
 		flowerNether = flowerBuilder
 			.setTextures("flower_netherbell.png")
 			.build(new BlockFlowerNetherbell("flower.netherbell", nextBlockID()))
-			.withTags(BlockTags.BROKEN_BY_FLUIDS);
+			.withTags(BlockTags.BROKEN_BY_FLUIDS)
+			.setTickOnLoad(true);
 
 		addMappings();
 		addTagsToBlock();
